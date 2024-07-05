@@ -1,0 +1,648 @@
+@font-face{
+    font-family: 'NavbarFont';
+    src: url(fuentes/copperplate.otf);
+}
+
+body{
+    background: #161616
+    margin 0;
+    display: grid;
+    text-align:center;
+    margin:auto;
+}
+
+.col img{
+    vertical-align: middle;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.spinner{
+    background: rgba(0,0,0,0);
+    border-radius: 0%;
+    overflow: hidden;
+    width: 50px;
+    aspect-ratio: 0;
+    animation: rotate 6s linear infinite;
+    img{
+        display: block;
+        width: 60px;
+        animation: bounce .2s linear infinite alternate;
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes bounce{
+    from{
+        transform: translateY(-5%);
+    }
+    to{
+        transform: translateY(10%);
+    }
+}
+
+.logo {
+    width: 120px;
+}
+
+.iconos{
+    width: 50px;
+}
+
+.buscador{
+    padding-left: 30px;
+}
+
+input{
+    outline: none;
+    box-sizing: border-box;
+    height: 60px;
+    padding: 0 20px;
+    color: #000;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 1px solid gray;
+    transition: all .7s ease;
+}
+
+::placeholder{
+    color: gray;
+}
+
+.buscador input{
+    width: 350px;
+
+}
+
+.nav-link{
+    font-family: 'NavbarFont';
+    src: url(fuentes/copperplate.otf);
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.card {
+    border: none; 
+}
+
+.card-deck {
+    margin-top: 10px; 
+}
+
+.carousel-item img {
+    position: auto;
+    max-width: 100%; 
+    height: auto; 
+    border: 3px solid #ccc; 
+    border-radius: 10px; 
+    height: 400px; 
+    width: 800px;
+}
+
+#carouselExampleSlidesOnly {
+    margin: 0 25%; 
+    width: 80%; 
+    text-align: center; 
+}
+
+.carousel-inner {
+    display: inline-block; 
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff; 
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255,209,3,255)
+}
+
+.navbar-nav .nav-link {
+    margin-top: 15px; 
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%; 
+    height: 50%; 
+    top: calc(50% - 0%); 
+    transform: translateY(-50%); 
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 30%; 
+    height: 30; 
+}
+
+.carousel-control-next {
+    right: 39%; 
+}
+
+.h2-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-left: -15px; 
+    margin-right: -15px; 
+}
+
+.h2-item {
+    flex: 25 1 33.3333%; 
+    padding-left: 15px; 
+    padding-right: 15px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txth2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px; 
+    font-family: 'NavbarFont';
+    src: url(fuentes/copperplate.otf);
+}
+
+.btn-primary {
+    font-family: 'NavbarFont';
+    src: url(fuentes/copperplate.otf);
+    background-color: #ffc107;
+    color: #ffffff;
+    border-color: #ffa507;
+    margin: 10px auto; 
+    display: block; 
+    width: fit-content; 
+}
+
+.btn-primary:hover {
+    background-color: #161616;
+    border-color: #161616;
+    color: rgba(255,209,3,255)
+}
+
+.btn-cart:hover {
+    background-color: white;
+    border-color: white;
+    color: rgba(255,209,3,255)
+}
+
+.buscador {
+    padding-left: 20%;
+    margin-top: 7px;
+}
+
+button{
+    border: none;
+    background: rgba(0, 0, 0, 0);
+}
+
+#btn-user{
+    background: rgba(0, 0, 0, 0);
+    border: none
+
+}
+#btn-carrito{
+    background: rgba(0, 0, 0, 0);
+    border: none
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 20px; /* Aumenta el espacio interior del formulario */
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+}
+
+.center h1 {
+    text-align: center;
+    padding: 10px 0; /* Ajusta el padding superior e inferior del título */
+    border-bottom: 1px solid silver;
+    margin-bottom: 20px; /* Añade margen inferior para separación */
+}
+
+.center form {
+    padding: 0 20px; /* Ajusta el espacio dentro del formulario */
+}
+
+form .txt_field {
+    position: relative;
+    margin: 15px 0; /* Aumenta el espacio entre los campos */
+}
+
+.txt_field input {
+    width: calc(100% - 10px); /* Ajusta el ancho del input para evitar desbordamientos */
+    padding: 10px; /* Aumenta el espacio interno del input */
+    font-size: 16px;
+    border: 1px solid #ffa507;
+    border-radius: 30px; /* Ajusta el radio del borde */
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.txt_field input:focus {
+    border-color: #ffa500; /* Cambia el color del borde al enfocar */
+}
+
+.txt_field label {
+    position: absolute;
+    top: -10px; /* Ajusta la posición de la etiqueta arriba del input */
+    left: 15px;
+    color: #adadad;
+    font-size: 14px;
+    background-color: white; /* Añade fondo blanco detrás de la etiqueta */
+    padding: 0 5px; /* Aumenta el espacio alrededor de la etiqueta */
+    transition: top 0.3s ease-in-out, font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.txt_field input:valid + label,
+.txt_field input:focus + label {
+    top: -10px; /* Mantiene la etiqueta arriba cuando el input está lleno o enfocado */
+    font-size: 12px;
+    color: #ffa500; /* Cambia el color de la etiqueta al enfocar */
+}
+
+.pass {
+    margin: 10px 0 20px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    width: 100%; /* Ajusta el ancho del botón de submit */
+    height: 50px;
+    border: none;
+    background: #ffa507;
+    border-radius: 30px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #ffa500; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.signup_link {
+    margin: 20px 0 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signup_link a {
+    color: #ffa507;
+    text-decoration: none;
+}
+
+.signup_link a:hover {
+    text-decoration: underline;
+}
+
+.modal-body h2{
+    text-align: center;
+}
+
+/* Ajustes para el modal y su contenido */
+.modal-body {
+    max-height: 400px; /* Altura máxima del contenido del carrito */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+}
+
+.contenedor {
+    max-width: 1500px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    contain: paint;
+}
+
+.contenedor .contenedor-items {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 30px;
+    transition: .3s;
+    width: 100%;
+}
+
+.contenedor .contenedor-items .item {
+    max-width: 100%;
+    height: 350px;
+    margin: center;
+    border: 1px solid #666;
+    border-radius: 20px;
+    padding: 20px;
+    transition: .3s;
+}
+
+.contenedor .contenedor-items .item .img-item {
+    width: 100%;
+    height: 50%; 
+    display: block; 
+    display: grid;
+}
+
+.contenedor .contenedor-items .item:hover {
+    background-color: #ffa500;
+    border-color: #ffa500;
+    color: #fff;
+    box-shadow: 0 0 10px #ffa500;
+    transform: scale(1.05);
+}
+
+.contenedor .contenedor-items .item .boton-item:hover {
+    background-color: #ffa500;
+    border: 0.5px solid black;
+}
+
+.contenedor .contenedor-items .item .titulo-item {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contenedor .contenedor-items .item .precio-item {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.contenedor .contenedor-items .item .boton-item {
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: black;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrito {
+    border: 1px solid #666;
+    max-height: calc(100vh - 125px);
+    overflow-y: scroll;
+    width: 35%;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 0;
+    transition: .3s;
+    margin-right: -100%;
+    opacity: 0;
+}
+
+.carrito::-webkit-scrollbar {
+    width: 8px; /* Ancho de la scrollbar */
+}
+.carrito::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la pista de la scrollbar */
+}
+
+.carrito::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del thumb (agarre) de la scrollbar */
+    border-radius: 4px; /* Radio del borde del thumb */
+}
+
+.carrito::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color del thumb al pasar el mouse */
+}
+
+.carrito .header-carrito {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.carrito .carrito-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #666;
+    padding: 20px;
+}
+
+.carrito .carrito-item img {
+    margin-right: 20px;
+    width: 100px;
+    height: 75px;
+}
+
+.carrito .carrito-item .carrito-item-titulo {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.carrito .carrito-item .selector-cantidad {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.carrito .carrito-item .carrito-item-cantidad {
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.carrito .carrito-item .selector-cantidad i {
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.carrito .carrito-item .carrito-item-precio {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.carrito .carrito-item .btn-eliminar {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #000;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+
+.carrito .carrito-item .btn-eliminar i {
+    pointer-events: none;
+}
+
+.carrito-total {
+    background-color: #f3f3f3;
+    padding: 30px;
+}
+
+.carrito-total .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carrito-total .btn-pagar {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.carrito-total .btn-pagar:hover{
+    background-color: #ffa507;
+    scale: 1.05;
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 850px) {
+    .contenedor {
+        display: block;
+    }
+
+    .contenedor-items {
+        width: 100% !important;
+    }
+
+    .carrito {
+        width: 100%;
+    }
+}
+
+::after, ::before {
+    box-sizing: border-box;
+}
+
+.modal-form {
+    width: 800px;
+    height: auto;
+    padding-left: 5%;
+    margin: 0 auto;
+}
+
+.item:hover{
+    box-shadow: 0px 0px 10px red;
+    border: 4px solid red;
+    animation: card 3s linear infinite;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 10px red;
+    border: 4px solid red;
+    animation: card 3s linear infinite;
+    border-radius: 5%;
+}
+
+@keyframes card {
+    0%, 100%{
+        border: 4px solid red;
+        box-shadow: 0px 0px 10px red;
+    }
+    20%{
+        border: 4px solid pink;
+        box-shadow: 0px 0px 10px pink;
+    }
+    40%{
+        border: 4px solid lightgreen;
+        box-shadow: 0px 0px 10px lightgreen;
+    }
+    60%{
+        border: 4px solid yellow;
+        box-shadow: 0px 0px 10px yellow;
+    }
+    80%{
+        border: 4px solid cyan;
+        box-shadow: 0px 0px 10px cyan;
+    }
+}
+
+label{
+    font-weight:600;
+    text-align: left;
+    padding-left: 10px;
+    color: #ffa500;
+    
+}
+
+
+.container{
+    padding-top: 25px;
+    
+}
+
+.mb-3{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.form-control {
+    border-radius: 30px; 
+    border-width: 2px;
+}
+
+
+.btn {
+    border-radius: 20px; 
+}
+
+
+
+
+
+
+
+

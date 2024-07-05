@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'pagina/css/style.css' %}">
+    <link rel="Icon" href="{% static 'pagina/img/Machape.png' %}">
+
+    <script src="{% static 'pagina/js/Carrito.js' %}"></script>
+   
+    <title>Pedro's Pizza</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      
+        <div class="container-fluid">
+            <div class="spinner">
+              <img src="{% static 'pagina/img/Machape.png' %}" alt="Pedropizza" class="pedro-">
+            </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="{% url "index" %}">
+                  <img class="logo" src="{% static 'pagina/img/Pedro’s Logos.png' %}" alt="">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Accesorios">Accesorios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Comidas">Comidas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Juguetes">Juguetes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Snacks">Snacks</a>
+              </li>
+              <li class="buscador">
+                <input type="text" placeholder="Buscar">
+                </div>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">       
+                          <button id="btn-user" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img class ="iconos" src="{% static '/pagina/img/Usuario.png' %}" alt="">
+                          </button>
+
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <h2>Inicio de sesión</h2>
+                                  <form id="registroForm">
+                                      <div class="txt_field">
+                                          <input type="text" id="username" name="username">
+                                          <label>Usuario</label>
+                                      </div>
+                                      <div class="txt_field">
+                                          <input type="password" id="password" name="password">
+                                          <label>Contraseña</label>
+                                      </div>
+                                      <div class="pass">¿Ha olvidado su contraseña?</div>
+                                      <button><input class="botonLog" type="submit" value="Login"></button>
+                                      <div class="signup_link">
+                                          No tiene una cuenta? <a href="Registro">Regístrese</a>
+                                          </button>
+
+                                      </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </li>
+                  <li class="nav-item">
+                    <button id="btn-carrito" type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="hacerVisibleCarrito()">
+                      <img class="iconos" src="{% static 'pagina/img/Carrito.png' %}" alt="">
+                  </button>
+                  
+                    </li>
+          </form>
+          </div>
+        </div>
+      </nav>
+      <section class="contenedor">
+          <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Cama Ortopedica</span>
+                <img  src="{% static 'pagina/img/CamaOrtopedica.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$6.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Arenero De Gato</span>
+                <img src="{% static 'pagina/img/Arenero.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$10.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Bebedero De Hamster</span>
+                <img src="{% static 'pagina/img/BebederoHamster.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$8.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Casa De Gato</span>
+                <img src="{% static 'pagina/img/CasaGato.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$12.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Collar</span>
+                <img src="{% static 'pagina/img/Collar.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$12.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Fuente de Agua</span>
+                <img src="{% static 'pagina/img/Fuente de agua.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$11.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Tubos Para Hamster</span>
+                <img src="{% static 'pagina/img/TubosHamster.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$9.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Correa</span>
+                <img src="{% static 'pagina/img/Correa.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$9.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Jaula Hamster</span>
+                <img src="{% static 'pagina/img/JaulaHamster.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$9.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+          </div>
+
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="carrito-items">
+            </div>
+            <div  class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total"></span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Boostrap para el carrusel -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>
